@@ -66,6 +66,7 @@ resource "aws_instance" "frontend" {
  Name = "${var.project_name}-${var.project_env}-frontend"
  }
 }
+
 resource "aws_route53_record" "frontend-record" {
 
   zone_id = var.hosted_zone_id
