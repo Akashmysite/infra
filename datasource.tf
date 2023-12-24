@@ -5,10 +5,12 @@ data "aws_ami" "latest" {
  name = "name"
  values = ["${var.project_name}-${var.project_env}-*"]
  }
+
  filter {
  name = "state"
  values = ["available"]
  }
+
  filter {
  name = "tag:Project"
  values = ["${var.project_name}"]
@@ -19,3 +21,4 @@ data "aws_ami" "latest" {
  values = ["${var.project_env}"]
  }
 }
+
